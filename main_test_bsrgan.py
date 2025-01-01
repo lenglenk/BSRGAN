@@ -41,8 +41,8 @@ def main():
 #    print(torch.version.cuda)              # cuda version
 #    print(torch.backends.cudnn.version())  # cudnn version
 
-    testsets = 'testsets'       # fixed, set path of testsets
-    testset_Ls = ['RealSRSet']  # ['RealSRSet','DPED']
+    testsets = 'BSRGAN/testsets'       # fixed, set path of testsets
+    testset_Ls = ['BSRGANSet']  # ['RealSRSet','DPED']
 
     model_names = ['RRDB','ESRGAN','FSSR_DPED','FSSR_JPEG','RealSR_DPED','RealSR_JPEG']
     model_names = ['BSRGAN']    # 'BSRGANx2' for scale factor 2
@@ -56,7 +56,7 @@ def main():
     for model_name in model_names:
         if model_name in ['BSRGANx2']:
             sf = 2
-        model_path = os.path.join('model_zoo', model_name+'.pth')          # set model path
+        model_path = '/content/BSRGAN/model_zoo/' + model_name + '.pth'          # set model path
         logger.info('{:>16s} : {:s}'.format('Model Name', model_name))
 
         # torch.cuda.set_device(0)      # set GPU ID
