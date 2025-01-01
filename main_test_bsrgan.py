@@ -56,7 +56,7 @@ def main():
     for model_name in model_names:
         if model_name in ['BSRGANx2']:
             sf = 2
-        model_path = '/content/BSRGAN/model_zoo/' + model_name + '.pth'          # set model path
+        model_path = '/content/drive/MyDrive/BSRGAN/BSRGAN/model_zoo/' + model_name + '.pth'          # set model path
         logger.info('{:>16s} : {:s}'.format('Model Name', model_name))
 
         # torch.cuda.set_device(0)      # set GPU ID
