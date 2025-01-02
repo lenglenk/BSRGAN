@@ -115,7 +115,7 @@ def main():
                 # --------------------------------
                 img_E = util.tensor2uint(img_E)
                 if save_results:
-                    util.imsave(img_E, os.path.join(E_path, img_name+'_'+model_name+'.png'))
+                    util.imsave(img_E, os.path.join(E_path, img_name + ext))
 
 
 if __name__ == '__main__':
